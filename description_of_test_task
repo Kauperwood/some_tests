@@ -1,6 +1,6 @@
-Необходимо написать приложение на Ruby (используя mechanize), которое будет выполнять такой сценарий:
-- Зайти на URL со списком товаров с сайта rozetka.com.ua, который будет передан параметром. Пример стартового URL: https://rozetka.com.ua/mobile-phones/c80003/preset=smartfon/.
-- Если список товаров состоит более чем из двух страниц - обработать две первые страницы которые ранее не обрабатывались и прервать выполнение. Скрипт должен сохранять свое состояние в redis. В следующий запуск уже обработанные страницы повторно не загружать.
-- Со всех страниц выбрать свойства отображенных товаров: URL, название, цена, количество отзывов, есть в наличии.
-- Напечатать в консоль отобранный на предыдущем шаге список товаров которые есть в наличии и имеют хотя бы один отзыв в формате URL Price Comments Name, с сортировкой по количеству отзывов (убывание), затем по цене (убывание).
-- Когда сканирование  завершено и результат напечатан, данные из redis нужно удалить.
+It is necessary to write an application in Ruby (using mechanize), which will execute the following scenario:
+- Go to the URL with the list of products from the site rozetka.com.ua, which will be passed as a parameter. Example of a starting URL: https://rozetka.com.ua/mobile-phones/c80003/preset=smartfon/.
+- If the list of products consists of more than two pages, process the first two pages that have not been processed before and interrupt execution. The script must save its state in redis. Do not reload the already processed pages in the next run.
+- Select the properties of the displayed products from all pages: URL, name, price, number of reviews, in stock.
+- Print to the console the list of products selected in the previous step that are in stock and have at least one review in the URL Price Comments Name format, sorted by the number of reviews (descending), then by price (descending).
+- When the scan is complete and the result is printed, the data from redis must be deleted.
